@@ -27,3 +27,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.go.undolevels = 50000
+
+vim.opt.hlsearch = true
+
+vim.opt.wrap = true

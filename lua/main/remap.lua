@@ -17,12 +17,18 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+-- copy into system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
+-- delete without overriding clipboard
 vim.keymap.set({ "n", "v" }, "<leader>d", "\"_d")
 
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- allows j and k to move inside a wrapped line
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
+
+-- unmap the help menu
+vim.keymap.set("n", "<F1>", ":let @/ = \"\"\n")
