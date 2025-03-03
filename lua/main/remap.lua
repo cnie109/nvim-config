@@ -30,5 +30,7 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 
--- unmap the help menu
+-- reset search parameters
 vim.keymap.set("n", "<F1>", ":let @/ = \"\"\n")
+-- unmap the help menu
+vim.keymap.set({ "i", "v", "x" }, "<F1>", "<Nop>")
